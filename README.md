@@ -1,5 +1,5 @@
 # OOP_LW
-This repository contains lab workings for Object Oriented Programming Course in MAI.
+This repository contains lab workings for Object Oriented Programming course in MAI.
 
 Author: Andrey Schapov
 
