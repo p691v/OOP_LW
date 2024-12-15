@@ -1,6 +1,6 @@
 #include "../include/triangle.h"
 
-void Triangle::checkCorrect (Point a, Point b, Point c) {
+void Triangle::validate (Point a, Point b, Point c) {
     double AB = (a - b).abs();
     double BC = (b - c).abs();
     double AC = (a - c).abs();
@@ -19,7 +19,7 @@ Triangle::Triangle () {
 }
 
 Triangle::Triangle (Point pA, Point pB, Point pC) {
-    checkCorrect(pA, pB, pC);
+    validate(pA, pB, pC);
     a = pA;
     b = pB;
     c = pC;
@@ -57,7 +57,7 @@ Triangle::operator double () {
     double AB = (a - b).abs();
     double BC = (b - c).abs();
     double AC = (a - c).abs();
-    return Utils::STriangle(AB, BC, AC);
+    return Utils::triangleArea(AB, BC, AC);
 }
 
 bool Triangle::operator== (const Triangle &other) const {
@@ -93,7 +93,7 @@ std::istream& Triangle::input (std::istream& is) {
 
     std::cout << ")" << std::endl;
 
-    checkCorrect(pA, pB, pC);
+    validate(pA, pB, pC);
 
     a = pA;
     b = pB;

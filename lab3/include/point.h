@@ -17,12 +17,11 @@ class Point {
         Point (Point &&other);
         Point& operator= (const Point &other);
         Point& operator= (Point &&other);
-
-        bool operator== (const Point &other) const;
-
         Point operator+ (const Point &other) const;
         Point operator- (const Point &other) const;
         Point operator* (double number) const;
+
+        bool operator== (const Point &other) const;
 
         double abs () const;
         double getX () const;

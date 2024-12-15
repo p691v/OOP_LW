@@ -15,7 +15,7 @@ class Hexagon : public Figure {
         Point e;
         Point f;
 
-        static void checkCorrect (Point a, Point b, Point c, Point d, Point e, Point f);
+        static void validate (Point a, Point b, Point c, Point d, Point e, Point f);
 
     protected:
         std::ostream& print (std::ostream& os) const override;

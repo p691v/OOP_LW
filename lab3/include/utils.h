@@ -7,5 +7,5 @@ class Utils {
 
     public:
         static bool cmpDouble (double a, double b);
-        static double STriangle (double a, double b, double c);
+        static double triangleArea (double a, double b, double c);
 };

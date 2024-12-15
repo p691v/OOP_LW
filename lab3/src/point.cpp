@@ -35,8 +35,8 @@ Point Point::operator- (const Point &other) const {
     return Point(x - other.x, y - other.y);
 }
 
-Point Point::operator* (double number) const {
-    return Point(number * x, number * y);
+Point Point::operator* (double num) const {
+    return Point(num * x, num * y);
 }
 
 double Point::abs () const {

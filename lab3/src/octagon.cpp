@@ -1,6 +1,6 @@
 #include "../include/octagon.h"
 
-void Octagon::checkCorrect (Point a, Point b, Point c, Point d, Point e, Point f, Point g, Point h) {
+void Octagon::validate (Point a, Point b, Point c, Point d, Point e, Point f, Point g, Point h) {
     double AB = (a - b).abs();
     double BC = (b - c).abs();
     double CD = (c - d).abs();
@@ -41,7 +41,7 @@ Octagon::Octagon () {
 }
 
 Octagon::Octagon (Point pA, Point pB, Point pC, Point pD, Point pE, Point pF, Point pG, Point pH) {
-    checkCorrect(pA, pB, pC, pD, pE, pF, pG, pH);
+    validate(pA, pB, pC, pD, pE, pF, pG, pH);
 
     a = pA;
     b = pB;
@@ -118,52 +118,52 @@ bool Octagon::operator&& (const Octagon &other) const {
     return Utils::cmpDouble((a - b).abs(), (other.a - other.b).abs());
 }
 
-std::ostream& Octagon::print (std::ostream& os) const {
-    os << "Octagon (" << std::endl;
-    os << "\tA = " << a << std::endl;
-    os << "\tB = " << b << std::endl;
-    os << "\tC = " << c << std::endl;
-    os << "\tD = " << d << std::endl;
-    os << "\tE = " << e << std::endl;
-    os << "\tF = " << f << std::endl;
-    os << "\tG = " << g << std::endl;
-    os << "\tH = " << h << std::endl;
-    os << ")";
-    return os;
+std::ostream& Octagon::print (std::ostream& outp) const {
+    outp << "Octagon (" << std::endl;
+    outp << "\tA = " << a << std::endl;
+    outp << "\tB = " << b << std::endl;
+    outp << "\tC = " << c << std::endl;
+    outp << "\tD = " << d << std::endl;
+    outp << "\tE = " << e << std::endl;
+    outp << "\tF = " << f << std::endl;
+    outp << "\tG = " << g << std::endl;
+    outp << "\tH = " << h << std::endl;
+    outp << ")";
+    return outp;
 }
 
-std::istream& Octagon::input (std::istream& is) {
+std::istream& Octagon::input (std::istream& inp) {
     Point pA, pB, pC, pD, pE, pF, pG, pH;
 
     std::cout << "Input Octagon (" << std::endl;
 
     std::cout << "Input point A = ";
-    is >> pA;
+    inp >> pA;
 
     std::cout << "Input point B = ";
-    is >> pB;
+    inp >> pB;
 
     std::cout << "Input point C = ";
-    is >> pC;
+    inp >> pC;
 
     std::cout << "Input point D = ";
-    is >> pD;
+    inp >> pD;
 
     std::cout << "Input point E = ";
-    is >> pE;
+    inp >> pE;
 
     std::cout << "Input point F = ";
-    is >> pF;
+    inp >> pF;
 
     std::cout << "Input point G = ";
-    is >> pG;
+    inp >> pG;
 
     std::cout << "Input point H = ";
-    is >> pH;
+    inp >> pH;
 
     std::cout << ")" << std::endl;
 
-    checkCorrect(pA, pB, pC, pD, pE, pF, pG, pH);
+    validate(pA, pB, pC, pD, pE, pF, pG, pH);
 
     a = pA;
     b = pB;
@@ -174,7 +174,7 @@ std::istream& Octagon::input (std::istream& is) {
     g = pG;
     h = pH;
 
-    return is;
+    return inp;
 }
 
 std::ostream& operator<< (std::ostream& os, const Octagon &octagon) {

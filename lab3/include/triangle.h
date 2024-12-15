@@ -13,7 +13,7 @@ class Triangle : public Figure {
         Point b;
         Point c;
 
-        static void checkCorrect (Point a, Point b, Point c);
+        static void validate (Point a, Point b, Point c);
 
     protected:
         std::ostream& print (std::ostream& os) const override;

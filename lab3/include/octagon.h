@@ -17,11 +17,11 @@ class Octagon : public Figure {
         Point g;
         Point h;
 
-        static void checkCorrect (Point a, Point b, Point c, Point d, Point e, Point f, Point g, Point h);
+        static void validate (Point a, Point b, Point c, Point d, Point e, Point f, Point g, Point h);
 
     protected:
-        std::ostream& print (std::ostream& os) const override;
-        std::istream& input (std::istream& is) override;
+        std::ostream& print (std::ostream& outp) const override;
+        std::istream& input (std::istream& inp) override;
 
     public:
         Octagon ();

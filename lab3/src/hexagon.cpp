@@ -1,6 +1,6 @@
 #include "../include/hexagon.h"
 
-void Hexagon::checkCorrect (Point a, Point b, Point c, Point d, Point e, Point f) {
+void Hexagon::validate (Point a, Point b, Point c, Point d, Point e, Point f) {
     double AB = (a - b).abs();
     double BC = (b - c).abs();
     double CD = (c - d).abs();
@@ -32,7 +32,7 @@ Hexagon::Hexagon () {
 }
 
 Hexagon::Hexagon (Point pA, Point pB, Point pC, Point pD, Point pE, Point pF) {
-    checkCorrect(pA, pB, pC, pD, pE, pF);
+    validate(pA, pB, pC, pD, pE, pF);
 
     a = pA;
     b = pB;
@@ -128,7 +128,7 @@ std::istream& Hexagon::input (std::istream& is) {
 
     std::cout << ")" << std::endl;
 
-    checkCorrect(pA, pB, pC, pD, pE, pF);
+    validate(pA, pB, pC, pD, pE, pF);
 
     a = pA;
     b = pB;
