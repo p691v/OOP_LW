@@ -3,4 +3,4 @@ This repository contains lab workings for Object Oriented Programming course in 
 
 Author: Andrey Schapov
 
-Group: МО-208Б-23
+Group: М8О-208Б-23
